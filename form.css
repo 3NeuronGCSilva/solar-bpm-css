@@ -1,0 +1,318 @@
+/* ===========================
+   FORMULÁRIO FUTURISTA LIGHT
+   Escopo só para este formulário
+   =========================== */
+
+#form-dinamico {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 32px 32px;
+  border-radius: 18px;
+  background: radial-gradient(circle at top left, #e0f2ff 0, #f8fafc 40%, #ffffff 100%);
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.18),
+    0 0 0 1px rgba(148, 163, 184, 0.25);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+}
+
+/* Remove fundo padrão do Solar/Bstrap dentro do container */
+#form-control {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ===========================
+   TÍTULOS
+   =========================== */
+
+#form-dinamico h1,
+#form-dinamico h2,
+#form-dinamico h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #0f172a;
+}
+
+#form-dinamico .schema-form-h1 h1 {
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  color: #0f172a;
+  padding-bottom: 6px;
+  border-bottom: 2px solid rgba(56, 189, 248, 0.7);
+}
+
+#form-dinamico .schema-form-h2 h2 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #1e293b;
+  margin-top: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+/* ícone visual para seções importantes (opcional) */
+#form-dinamico .schema-form-h2 h2::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 999px;
+  background: radial-gradient(circle, #38bdf8 0, #6366f1 70%);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.7);
+}
+
+/* ===========================
+   SEÇÕES / CARDS
+   =========================== */
+
+#form-dinamico .schema-form-section > section.row {
+  margin-bottom: 20px;
+  padding: 18px 20px 10px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow:
+    0 14px 35px rgba(15, 23, 42, 0.12),
+    0 0 0 1px rgba(148, 163, 184, 0.25);
+  backdrop-filter: blur(12px);
+  transition: transform 160ms ease-out, box-shadow 160ms ease-out,
+    border-color 160ms ease-out, background 160ms ease-out;
+}
+
+#form-dinamico .schema-form-section > section.row:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 20px 55px rgba(15, 23, 42, 0.18),
+    0 0 0 1px rgba(56, 189, 248, 0.5);
+  border-color: rgba(56, 189, 248, 0.55);
+  background: rgba(248, 250, 252, 0.97);
+}
+
+/* Campos ocultos: deixar mais "chips" discretos */
+#form-dinamico .ic-hidden-element {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+  margin-bottom: 4px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748b;
+  background: rgba(15, 23, 42, 0.03);
+  border: 1px dashed rgba(148, 163, 184, 0.8);
+}
+
+#form-dinamico .ic-hidden-element i {
+  margin-right: 4px;
+  color: #94a3b8;
+}
+
+/* ===========================
+   LABELS / TEXTOS PEQUENOS
+   =========================== */
+
+#form-dinamico .control-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+#form-dinamico .help-block {
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+/* ===========================
+   INPUTS / SELECTS / TEXTAREA
+   =========================== */
+
+#form-dinamico .form-control,
+#form-dinamico input[type="text"],
+#form-dinamico input[type="input"],
+#form-dinamico input[type="number"],
+#form-dinamico input[type="date"],
+#form-dinamico select,
+#form-dinamico textarea {
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.85);
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.95), #ffffff);
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.2);
+  padding: 8px 10px;
+  font-size: 0.86rem;
+  color: #0f172a;
+  transition: border-color 150ms ease-out, box-shadow 150ms ease-out,
+    background 150ms ease-out, transform 120ms ease-out;
+}
+
+/* Mantém inputs disabled legíveis, com cara de bloqueado mas bonitos */
+#form-dinamico .form-control[disabled],
+#form-dinamico input[disabled],
+#form-dinamico select[disabled],
+#form-dinamico textarea[disabled] {
+  background: linear-gradient(135deg, #f8fafc, #e5edf9);
+  color: #64748b;
+  border-style: dashed;
+  border-color: rgba(148, 163, 184, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.4);
+  cursor: not-allowed;
+}
+
+/* Foco futurista (borda neon) */
+#form-dinamico .form-control:focus,
+#form-dinamico input:focus,
+#form-dinamico select:focus,
+#form-dinamico textarea:focus {
+  outline: none !important;
+  border-color: #38bdf8;
+  box-shadow:
+    0 0 0 1px #38bdf8,
+    0 0 0 2px rgba(191, 219, 254, 0.9),
+    0 0 22px rgba(56, 189, 248, 0.55);
+  background: radial-gradient(circle at top left, #ecfeff, #ffffff);
+  transform: translateY(-1px);
+}
+
+/* Estado de erro (se o Solar aplicar .has-error) */
+#form-dinamico .has-error .form-control {
+  border-color: #f97373;
+  box-shadow: 0 0 0 1px rgba(248, 113, 113, 0.7);
+}
+
+/* ===========================
+   RADIOS / CHECKBOXES
+   =========================== */
+
+#form-dinamico .schema-form-radios .radio {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+#form-dinamico .schema-form-radios .radio label {
+  position: relative;
+  padding-left: 26px;
+  font-size: 0.86rem;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+/* Esconde input padrão */
+#form-dinamico .schema-form-radios .radio input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+}
+
+/* Círculo custom */
+#form-dinamico .schema-form-radios .radio label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 999px;
+  border: 2px solid rgba(148, 163, 184, 0.9);
+  background: #f9fafb;
+  box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.3);
+  transition: border-color 120ms ease-out, box-shadow 120ms ease-out,
+    background 120ms ease-out;
+}
+
+/* Ponto interno quando selecionado */
+#form-dinamico .schema-form-radios .radio input[type="radio"]:checked + span,
+#form-dinamico .schema-form-radios .radio input[type="radio"]:checked ~ span {
+  color: #0369a1;
+  font-weight: 600;
+}
+
+#form-dinamico .schema-form-radios .radio input[type="radio"]:checked + span::before,
+#form-dinamico .schema-form-radios .radio input[type="radio"]:checked ~ span::before {
+  /* fallback caso o span esteja antes/depois - garantimos via label::after abaixo */
+}
+
+/* Usando ::after no label para o ponto central */
+#form-dinamico .schema-form-radios .radio label::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: radial-gradient(circle, #38bdf8 0, #6366f1 80%);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
+  transition: transform 120ms ease-out;
+}
+
+#form-dinamico .schema-form-radios .radio input[type="radio"]:checked ~ label::before,
+#form-dinamico .schema-form-radios .radio input[type="radio"]:checked + label::before {
+  border-color: #38bdf8;
+  background: #ecfeff;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+#form-dinamico .schema-form-radios .radio input[type="radio"]:checked ~ label::after,
+#form-dinamico .schema-form-radios .radio input[type="radio"]:checked + label::after {
+  transform: translateY(-50%) scale(1);
+}
+
+/* ===========================
+   LINHAS HORIZONTAIS
+   =========================== */
+
+#form-dinamico hr {
+  margin: 18px 0;
+  height: 1px !important;
+  border: none !important;
+  background: linear-gradient(
+    90deg,
+    rgba(148, 163, 184, 0),
+    rgba(148, 163, 184, 0.9),
+    rgba(148, 163, 184, 0)
+  ) !important;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+   =========================== */
+
+@media (max-width: 991px) {
+  #form-dinamico {
+    padding: 18px 14px 22px;
+    border-radius: 0;
+    box-shadow: none;
+    background: #f8fafc;
+  }
+
+  #form-dinamico .schema-form-section > section.row {
+    padding: 14px 14px 8px;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  #form-dinamico .form-element[class*="col-sm-"] {
+    width: 100% !important;
+  }
+
+  #form-dinamico .schema-form-h1 h1 {
+    font-size: 1.4rem;
+  }
+
+  #form-dinamico .schema-form-h2 h2 {
+    font-size: 1rem;
+  }
+}
